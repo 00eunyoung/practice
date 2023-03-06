@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+        @media (max-width: 768px){
+            #contanier {width: 100%;}
+            #tabMenu{float: none; width: 95%;}
+            #cart{float: none; width: 95%; height: auto;}
+            footer{width: 95%;}
+        }
+    @media screen and (max-width:390px) {
+
+      header > #nav{float: left; width: 100%; height: 50%; background-color: aliceblue; position: static;}
+      #main{width: 100%; height: 100%;}
+      #tabMenu{float: none; width: 100%; height: 100%;}
+      .tabContent .caption{width: 100%; height: 60%;}
+      .tabCon1{width: 35%;}
+            #cart{float: none; width: 100%;}
+            #cartHeader{width: 100%; height: 20vw;}
+            #cartCont{width: 100%; height: 50vw;}
+            footer{width: 100%;}
+}
+@media screen and (min-width:391px) {
+  #contanier{width: 95%;}
+
+
+}
+  </style>
+</head>
+<body>
+
+  <div id="contanier">
+     <!-- 헤더-->
+    <header>
+       <!-- 로고-->
+      <div class="logo">
+        <img src="images/카페로고.jpg" width="300px" height="150px">
+      </div>
+       <!-- 네비-->
+      <div id="nav">
+        <ul>
+          <li>
+            <a href="@">한국어 </a>
+          </li>
+          <li>
+            <a href="@">E N G</a>
+          </li>
+          <li>
+            <a href="@">C N N</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+
+     <!-- 메인-->
+    <div id="main">
+         <!-- 탭메뉴-->
+      <section id="tabMenu">
+
+        <input type="radio" id="tab1" name="tabs" checked>
+        <label for="tab1">커피</label>
+        
+        <input type="radio" id="tab2" name="tabs" checked>
+        <label for="tab2">티/에이드</label>
+        
+        <input type="radio" id="tab3" name="tabs" >
+        <label for="tab3">디저트</label>
+
+
+            <!--샌드위치-->
+            <div class="tabContent" id="notice1" >
+              <div  class="tabCon1">
+                <img src="images/에스프레소.jpg" >
+                <h2>에스프레소 - 3000원</h2>
+                
+                <div class="caption">
+                  <br>
+                
+                    <button class="plus_minus_button" onclick="plus1(1,3000)">+ </button>
+                    <button class="plus_minus_button" onclick="minus1(1,3000)">- </button>
+                    
+
+                </div>
+              </div>
+
+
+                <div  class="tabCon1">
+                  <img src="images/아메리카노.jpg" >
+                  <h2>아메리카노 - 4000원</h2>
+                  <div class="caption">
+                    <br>
+
+                    <button class="plus_minus_button" onclick="plus1(1,4000)">+ </button>
+                    <button class="plus_minus_button" onclick="minus1(1,4000)">- </button>
+     
+                  </div>
+                </div>
+
+                  <div  class="tabCon1">
+                    <img src="images/카라멜마키아또.jpg" >
+                    <h2>카라멜마키아또 - 5500원</h2>
+                    <div class="caption">
+                      <br>
+                      
+                      <button class="plus_minus_button" onclick="plus1(1,5500)">+ </button>
+                      <button class="plus_minus_button" onclick="minus1(1,5500)">- </button>
+
+                    </div>
+                  </div>
+
+                  <div  class="tabCon1">
+                    <img src="images/카푸치노.jpg" >
+                    <h2>카푸치노 - 4500원</h2>
+                    <div class="caption">
+                      <br>
+                      
+                      <button class="plus_minus_button" onclick="plus1(1,5500)">+ </button>
+                      <button class="plus_minus_button" onclick="minus1(1,5500)">- </button>
+
+                    </div>
+                  </div>
+          
+
+
+
+
+            </div>
+                     <!--티, 에이드-->
+            <div class="tabContent" id="notice2">
+
+              <div  class="tabCon1">
+                <img src="images/아이스티.jpg" >
+                <h2> 복숭아 아이스티 - 4000원</h2>
+                <div class="caption">
+                  <br>
+          
+                  <button class="plus_minus_button" onclick="plus1(1,4000)">+ </button>
+                  <button class="plus_minus_button" onclick="minus1(1,4000)">- </button>
+                    
+                </div>
+              </div>
+
+              <div  class="tabCon1">
+                <img src="images/레몬에이드.jpg" >
+                <h2>레몬에이드 - 4500원</h2>
+                <div class="caption">
+                  <br>
+                  <button class="plus_minus_button" onclick="plus1(1,4500)">+ </button>
+                  <button class="plus_minus_button" onclick="minus1(1,4500)">- </button>
+                </div>
+              </div>
+
+              <div  class="tabCon1">
+                <img src="images/자몽에이드.jpg" >
+                <h2>자몽에이드 - 4500원</h2>
+                <div class="caption">
+                  <br>
+                  <button class="plus_minus_button" onclick="plus1(1,4500)">+ </button>
+                  <button class="plus_minus_button" onclick="minus1(1,4500)">- </button>
+                </div>
+              </div>
+
+             
+
+            </div>
+
+
+
+              <!--디저트-->
+              <div class="tabContent" id="notice3">
+
+                <div  class="tabCon1">
+                  <img src="images/티라미슈.jpg" >
+                  <h2> 티라미슈 - 4000원</h2>
+                  <div class="caption">
+                    <br>
+                    <button class="plus_minus_button" onclick="plus1(1,4000)">+ </button>
+                    <button class="plus_minus_button" onclick="minus1(1,4000)">- </button>
+                  </div>
+                </div>
+                <div  class="tabCon1">
+                  <img src="images/마카롱.jpg" >
+                  <h2> 마카롱 - 4000원</h2>
+                  <div class="caption">
+                    <br>
+                    <button class="plus_minus_button" onclick="plus1(1,4000)">+ </button>
+                    <button class="plus_minus_button" onclick="minus1(1,4000)">- </button>
+                  </div>
+                </div>
+                <div  class="tabCon1">
+                  <img src="images/타르트.jpg" >
+                  <h2>타르트 - 3000원</h2>
+                  <div class="caption">
+                    <br>
+                    <button class="plus_minus_button" onclick="plus1(1,3000)">+ </button>
+                    <button class="plus_minus_button" onclick="minus1(1,3000)">- </button>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+
+
+
+          
+      </section>
+       <!--주문서-->
+      <aside id="cart">
+        <script src="js/script.js"></script>
+        <div id="cartHeader">
+          <h1>주문내역</h1>
+        </div>
+
+          <div id="cartCont">
+            <div id="order"></div>
+            <div id="order1"></div>
+            <div id="order2"></div>
+            <div id="order3"></div>
+            <div id="order4"></div>
+            <div id="order5"></div>
+            <div id="order6"></div>
+            <div id="order7"></div>
+            <div id="order8"></div>
+            <div id="order9"></div>
+            <div id="order10"></div>
+          </div>
+
+          <div id="cartfooter">
+            <h4>주문결과</h4> 
+            <br>
+            <div id="total">  합계  :   </div><button id="on" onclick="ordercom();">구매 하기</button>
+              <button id="off" onclick="reset();">전체 취소</button>
+          
+          </div>
+      </aside>
+    
+  <!-- </div>
+    <footer>
+      푸터
+    </footer>
+
+
+  </div> -->
+
+  
+</body>
+</html>
+
+
